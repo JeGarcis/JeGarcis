@@ -1,0 +1,258 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMg0HR2XsE0XdbTFO/l0koy",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JeGarcis/JeGarcis/blob/main/Python%20-%20Modulo%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercicio da Aula\n",
+        "nome = input(\"Digite seu nome: \")\n",
+        "\n",
+        "# F-string é a forma que vamos usar na aula, pois é a orientada no PEP 498\n",
+        "    print(f\"{nome}, bem-vindo à disciplina de programação. Parabéns pelo seu primeiro hello world\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LJvhF-jmmYE9",
+        "outputId": "02376652-24ce-4a21-e202-cbc5724e8cbc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite seu nome: Jessica\n",
+            "Jessica, bem-vindo à disciplina de programação. Parabéns pelo seu primeiro hello world\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercicio da Aula\n",
+        "idade = int(input(\"Digite sua idade: \"))\n",
+        "\n",
+        "if idade < 18:\n",
+        "    print(\"Você é menor de idade\")\n",
+        "elif idade >= 18 and idade < 65:\n",
+        "    print(\"Você é adulto\")\n",
+        "else:\n",
+        "    print(\"Você é idoso\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ly7X4IQ_su6s",
+        "outputId": "cdc34bfe-ba35-40c9-ffe6-a76ff476d56f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite sua idade: 28\n",
+            "Você é adulto\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercicio da Aula\n",
+        "\n",
+        "print(\"Bem-vindo à Máquina de Automática de Cinema!\")\n",
+        "\n",
+        "#Primeiro, solicite a idade do cliente\n",
+        "idade = input(\"Digite sua idade: \")\n",
+        "\n",
+        "#Verificando a idade para sugestão de filmes\n",
+        "if idade < \"12\":\n",
+        "    print(\"Você pode assistir filmes infantis\")\n",
+        "elif idade >= \"12\" and idade <= \"18\":\n",
+        "    print(\"Você pode assistir filmes adolescentes\")\n",
+        "else:\n",
+        "    print(\"Você pode assistir filmes adultos\")\n",
+        "\n",
+        "#Agora, insira a quantidade de ingressos\n",
+        "quantidade = input(\"Digite a quantidade de ingressos: \")\n",
+        "if quantidade >= \"1\":\n",
+        "    print(\"Há ingressos disponiveis!\")\n",
+        "else:\n",
+        "    print(\"Desculpa, os ingressos esgotaram hoje.\")\n"
+      ],
+      "metadata": {
+        "id": "_Ma5xLuKvoQ1"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercicio da Aula\n",
+        "  filmes = [\"Filme 1\", \"Filme 2\", \"Filme 3\", \"Filme 4\",\"Filme 5\"]\n",
+        "\n",
+        "#Criando um looping para classificar cada filme\n",
+        "for filme in filmes:\n",
+        "   classificacao = input(f\"Como você classifica o '{filme}' de 1 a 5? (ou 0 para parar): \")\n",
+        "\n",
+        "if classificacao > 5:\n",
+        "    print(\"Por favor, digite uma classificação válida de 1 a 5.\")\n",
+        "else:\n",
+        "    print(f\"Você classificou '{filme}' com {classificacao} estrelas.\")\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "EaxOfXxuYXfq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Arquivo que pedi ajuda ao professor\n",
+        "\n",
+        "filmes = [\"Filme 1\", \"Filme 2\", \"Filme 3\", \"Filme 4\",\"Filme 5\"]\n",
+        "\n",
+        "for filme in filmes:\n",
+        "    classificacao = input(f\"Como você classifica o '{filme}' de 1 a 5? (ou 0 para parar): \")\n",
+        "    if classificacao == \"0\":\n",
+        "        break\n",
+        "\n",
+        "        classificacao = int(classificacao)\n",
+        "\n",
+        "        if classificacao < 1 or classificacao > 5:\n",
+        "          print(f\"Por favor, digite uma classificação válida de 1 a 5.\")\n",
+        "        else:\n",
+        "          print(f\"Você classificou '{filme}' com {classificacao} estrelas.\")"
+      ],
+      "metadata": {
+        "id": "wVD7ElcndThT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercicio da Aula 4\n",
+        "\n",
+        "#Fazendo uma soma\n",
+        "a = int(input(\"Digite o primeiro número que seja somar: \")) #Precisa colocar o int pro python saber que é um numero\n",
+        "b = int(input(\"Digite o segundo número que seja somar: \")) #Precisa colocar o int pro python saber que é um numero\n",
+        "\n",
+        "resultado_soma = int(a) + int(b)\n",
+        "\n",
+        "print(\"A soma do numero\", a, \"+ o numero\", b, \"é igual a: \", resultado_soma)\n",
+        "\n",
+        "#Verificando se é par\n",
+        "if resultado_soma % 2 == 0:\n",
+        "    print(\"O resultado é par\")\n",
+        "else:\n",
+        "    print(\"O resultado é impar\")"
+      ],
+      "metadata": {
+        "id": "2gWuEoD-tQBT",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ac525388-37e3-4aa0-c838-55d595b92252"
+      },
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número que seja somar: 10\n",
+            "Digite o segundo número que seja somar: 10\n",
+            "A soma do numero 10 + o numero 10 é igual a:  20\n",
+            "O resultado é par\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercicio da Aula 4\n",
+        "a = int(input(\"Digite a primeira nota: \")) #Precisa colocar o int pro python saber que é um numero\n",
+        "b = int(input(\"Digite a segunda nota: \"))\n",
+        "c = int(input(\"Digite a terceira nota: \"))\n",
+        "\n",
+        "notas = [a, b, c] #Aqui estamos definindo o que é notas\n",
+        "\n",
+        "def calcular_media(notas): #Aqui estamos falando que queremos fazer uma média das notas, e estamos criando essa função\n",
+        "    total = sum(notas) #Aqui estamos somando as notas\n",
+        "    media = total / len(notas) #Len é a função que conta os caracteres da string, e estamos dividindo o total somado pelo numero de caracteres\n",
+        "    return media\n",
+        "\n",
+        "arredondar_media = lambda media: round(media, 2)  #lambda é para quando vamos usar algo apenas 1x, sendo assim não damos um nome pra essa função\n",
+        "\n",
+        "media = calcular_media(notas) #Calculando a média\n",
+        "media_arredondada = arredondar_media(media) #Calculando a média\n",
+        "\n",
+        "situacao = \"Aprovado\" if media_arredondada >= 7 else \"Reprovado\" #Aqui estamos verificando se o aluno foi aprovado ou reprovado\"\n",
+        "\n",
+        "print(\"A média do aluno é:\", media_arredondada)\n",
+        "print(\"O aluno está: \", situacao)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Zm_8fLHCp011",
+        "outputId": "ea77d25b-ea38-46da-9b01-b470a14ab012"
+      },
+      "execution_count": 57,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a primeira nota: 1\n",
+            "Digite a segunda nota: 1\n",
+            "Digite a terceira nota: 1\n",
+            "A média do aluno é: 1.0\n",
+            "O aluno está:  Reprovado\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
